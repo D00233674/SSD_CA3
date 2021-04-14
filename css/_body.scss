@@ -1,0 +1,192 @@
+/* Here is where the body styles start */
+
+body {
+    background-color: #ccc;
+    font-family: $readingFont;
+    background-image: url('../image_uploads/background1.jpg');
+    background-repeat: no-repeat;
+}
+
+.container {
+    /* margin-top: 0; 
+    font-family: Arial, Helvetica, sans-serif;*/
+    width: 1000px;
+    margin: 2% auto 0 auto;
+    background-color: white;
+    border: 1px solid black;
+    padding: .5em 2em;
+}
+
+
+section {
+    margin-top: 1%;
+    float: left;
+    width: 800PX;
+    padding-bottom: 1.5em;
+}
+
+
+ul {
+    margin: 0 0 1em 0;
+    padding: 0 0 0 2.5em;
+}
+li {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: rgb(41, 64, 124);
+    font-weight: bold;
+    &:hover {
+        color: rgb(208, 133, 4);
+    }
+}
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px dashed black;
+    padding: .2em .5em .2em .5em;
+    vertical-align: top;
+    text-align: left;
+}
+
+tbody {
+    tr:hover {
+        background-color: $light-grey;
+    }
+}
+
+thead {
+    background-color: $blue;
+    color: white;
+}
+
+form {
+    margin: 0;
+}
+br {
+    clear: left;
+}
+/* the styles for classes */
+.right {
+    text-align: right;
+}
+.last_paragraph {
+	margin-bottom: 2em;	
+}
+.margin_top_increase {
+	margin-top: 1em;	
+}
+
+#add_bike_form, #edit_bike_form {
+    margin: .5em 0 1em;
+    label {
+        width: 10em;
+        padding-right: 1em;
+        padding-bottom: .5em;
+        float: left;
+    }
+    input {
+        float: left;
+    }
+    input[text] {
+        width: 15em;
+    }
+}
+ 
+
+.red-button {
+    border: 1px solid $red;
+    background-color: $red;
+    color: white;
+    transition-duration: 0.4s;
+    &:hover {
+        border-radius: 3px;
+        background-color: white;
+        color: black;
+    }
+}
+
+.green-button {
+    border: 1px solid $green;
+    background-color: $green;
+    color: white;
+    transition-duration: 0.4s;
+    &:hover {
+        border-radius: 3px;
+        background-color: white;
+        color: black;
+    }
+}
+
+.add-button {
+    border: 1px solid $green;
+    background-color: $green;
+    color: white;
+    padding: 1%;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    &:hover {
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+}
+
+.manage-button {
+    border: 1px solid $blue;
+    background-color: $blue;
+    color: white;
+    padding: 1%;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    &:hover {
+        color: white;
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+}
+
+.margin-bottom {
+    margin-bottom: 4%;
+}
+
+.button {
+    border: outset;
+    padding: 1%;
+    transition-duration: 0.4s;
+    width: 25px;
+    margin-bottom: 5%;
+    margin-left: 25%;
+    text-align: center;
+    &:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.submit-button {
+    font-size: 1.005em;
+    font-weight: bold;
+    padding: 1%;
+}
+
+.homepage-button {
+    margin-left: 17.5%;
+}
+
+#edit-img {
+    margin-left: 17.5%;
+}
+
+#page-heading, #search-form, #reset-form {
+    display: inline-block;
+}
+
+#search-form {
+    margin-left: 2.5%;
+}
+

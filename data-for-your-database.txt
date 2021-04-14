@@ -1,0 +1,117 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Mar 12, 2021 at 10:26 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.10
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `bike_shop`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `bikes`
+--
+
+DROP TABLE IF EXISTS `bikes`;
+CREATE TABLE `bikes` (
+  `bikeID` int(11) NOT NULL,
+  `categoryID` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `engineSize` varchar(10) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  `lastService` date DEFAULT NULL,
+  `image` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `bikes`
+--
+
+INSERT INTO `bikes` (`bikeID`, `categoryID`, `name`, `engineSize`, `price`, `lastService`, `image`) VALUES
+(2, 1, 'Leximoto LXR', '125cc', '2900.00', '2020-06-23', 'Leximoto-LXR125.jpg'),
+(3, 1, 'Honda MSX', '125cc', '3200.00', '2020-10-21', 'Honda-MSX125.jpg'),
+(6, 2, 'Honda CBX', '500cc', '7900.00', '2020-10-21', 'Honda-CBX500.jpg'),
+(7, 2, 'Honda CBR', '500cc', '6800.00', '2020-06-23', 'Honda-CBR500.jpg'),
+(10, 3, 'Harley Davidson Sportster XL', '1200cc', '9500.00', '2020-10-21', 'Harley-Sportster-XL1200.jpg'),
+(13, 2, 'Kawasaki Ninja', '650cc', '7000.00', '2021-03-10', '2020-Kawasaki-Ninja-650.jpg'),
+(25, 1, 'KTM Duke', '125cc', '3500.00', '2021-02-01', 'KTM-Duke125.jpg'),
+(26, 1, 'Honda CBR', '125cc', '3500.00', '2020-10-21', 'Honda-CBR125.jpg'),
+(27, 1, 'Yamaha YZFR', '125cc', '3500.00', '2021-01-25', 'Yamaha-YZFR125.jpg'),
+(29, 2, 'Yamaha R', '321cc', '7000.00', '2020-06-23', 'Yamaha-R3-321.jpg'),
+(30, 2, 'Royal Enfield Interceptor', '650cc', '8500.00', '2020-10-21', 'Royal-Enfield-650.jpg'),
+(31, 3, 'BMW R GS', '1250cc', '11000.00', '2020-06-23', 'BMW-RGS-1250.jpg'),
+(32, 3, 'BMW RT', '1250cc', '8900.00', '2020-10-21', 'BMW-RT-1250.jpg'),
+(33, 3, 'Kawasaki ZSX', '1000cc', '9500.00', '2020-02-15', 'Kawasaki-ZSX-1000.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+CREATE TABLE `categories` (
+  `categoryID` int(11) NOT NULL,
+  `categoryName` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
+(1, 'A1'),
+(2, 'A2'),
+(3, 'A');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `bikes`
+--
+ALTER TABLE `bikes`
+  ADD PRIMARY KEY (`bikeID`);
+
+--
+-- Indexes for table `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`categoryID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `bikes`
+--
+ALTER TABLE `bikes`
+  MODIFY `bikeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+
+--
+-- AUTO_INCREMENT for table `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
