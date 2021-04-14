@@ -54,6 +54,5 @@ include('includes/header.php');
             <input class="add-button submit-button" type="submit" value="Add Bike">
             <br>
         </form>
-        <p><a class="manage-button homepage-button" href="index.php">View Homepage</a></p>
-        <br>
+        
     <?php include('includes/footer.php'); ?>

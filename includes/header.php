@@ -11,4 +11,13 @@
 
 <!-- the body section -->
 <body onload="validateForm();">
-<header><h1>My PHP CRUD app</h1></header>
+<header>
+    <h1>My PHP CRUD app</h1>
+    <!-- class="active" -->
+    <div class="topnav">
+        <a href="index.php">Home</a>
+        <a href="add_bike_form.php">Add Bike</a>
+        <a href="category_list.php">Manage Categories</a>
+        <a href="contact.php">Contact Us</a>
+    </div>
+</header>

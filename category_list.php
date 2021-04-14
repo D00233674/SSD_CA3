@@ -44,8 +44,7 @@ include('includes/header.php');
         <input type="input" name="name">
         <input id="add_category_button" type="submit" value="Add">
     </form>
-    <br>
-    <p><a href="index.php">Homepage</a></p>
+    
 
     <?php
 include('includes/footer.php');

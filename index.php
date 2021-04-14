@@ -173,8 +173,7 @@ value="<?php echo $bike['categoryID']; ?>">
 <?php }  ?>
 </tbody>
 </table>
-<p class="margin-bottom"><a class="add-button" href="add_bike_form.php">Add Bike</a></p>
-<p><a class="manage-button" href="category_list.php">Manage Categories</a></p>
+
 </section>
 <?php
 include('includes/footer.php');

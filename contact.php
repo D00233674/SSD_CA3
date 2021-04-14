@@ -32,6 +32,6 @@ frmvalidator.addValidation("email","req","Please provide your email");
 frmvalidator.addValidation("email","email","Please enter a valid email address"); 
 </script>
 
-        <p><a class="manage-button homepage-button" href="index.php">View Homepage</a></p>
-        <br>
-    <?php include('includes/footer.php'); ?>
+
+
+<?php include('includes/footer.php'); ?>
