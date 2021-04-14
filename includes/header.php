@@ -5,6 +5,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+
+<script language="JavaScript" src="js/gen_validatorv31.js" type="text/javascript"></script>
 </head>
 
 <!-- the body section -->

@@ -68,7 +68,6 @@ $statement3->closeCursor();
 ?>
 <div class="container">
 <?php
-
 include('includes/header.php');
 ?>
 <div id="sub-header">

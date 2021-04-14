@@ -33,21 +33,18 @@ if( empty($errors))
 	
 	mail($to,$email_subject,$email_body,$headers);
 	//redirect to the 'thank you' page
-	header('Location: contact-form-thank-you.html');
+	header('Location: contact-form-thank-you.php');
 } 
 ?>
-<!DOCTYPE HTML> 
-<html>
-<head>
-	<title>Contact form handler</title>
-</head>
-
-<body>
+<div class="container">
+<?php
+include('includes/header.php');
+?>
 <!-- This page is displayed only if there is some error -->
 <?php
 echo nl2br($errors);
 ?>
 
-
-</body>
-</html>
+<?php
+include('includes/footer.php');
+?>
