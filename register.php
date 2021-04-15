@@ -77,13 +77,10 @@ if(isset($_POST['register'])){
 }
 
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Register</title>
-    </head>
-    <body>
+<div class="container">
+<?php
+include('includes/header.php');
+?>
         <h1>Register</h1>
         <form action="register.php" method="post">
             <label for="username">Username</label>
@@ -92,5 +89,6 @@ if(isset($_POST['register'])){
             <input type="text" id="password" name="password"><br>
             <input type="submit" name="register" value="Register"></button>
         </form>
-    </body>
-</html>
+        <?php
+    include('includes/footer.php');
+    ?>

@@ -19,5 +19,7 @@
         <a href="add_bike_form.php">Add Bike</a>
         <a href="category_list.php">Manage Categories</a>
         <a href="contact.php">Contact Us</a>
+        <a href="register.php">Register</a>
+        <a href="login.php">Login</a>
     </div>
 </header>

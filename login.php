@@ -72,13 +72,10 @@ if(isset($_POST['login'])){
 }
  
 ?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Login</title>
-    </head>
-    <body>
+<div class="container">
+<?php
+include('includes/header.php');
+?>
         <h1>Login</h1>
         <form action="login.php" method="post">
             <label for="username">Username</label>
@@ -87,5 +84,6 @@ if(isset($_POST['login'])){
             <input type="text" id="password" name="password"><br>
             <input type="submit" name="login" value="Login">
         </form>
-    </body>
-</html>
+        <?php
+include('includes/footer.php');
+?>
