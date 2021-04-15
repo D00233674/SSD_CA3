@@ -1,5 +1,26 @@
 <?php
 
+/**
+ * Start the session.
+ */
+session_start();
+
+/**
+ * Check if the user is logged in.
+ */
+if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
+    //User not logged in. Redirect them back to the login.php page.
+    header('Location: login.php');
+    exit;
+}
+
+
+/**
+ * Print out something that only logged in users can see.
+ */
+
+echo 'Congratulations! You are logged in!';
+
 require_once('database.php');
 
 // Get category ID
@@ -74,11 +95,11 @@ include('includes/header.php');
 <div id="sub-header">
 <h1 id="page-heading">Bike Shop</h1>
 
-<form action="index.php" method="post" id="search-form">
+<form action="manage_bikes.php" method="post" id="search-form">
     <input type="text" id="name-searched" name="name-searched" placeholder="Make/Model of Bike" value="<?php echo $name?>" />
     <input class="green-button" type="submit" value="Search">
 </form>
-<form action="index.php" method="post" id="reset-form">
+<form action="manage_bikes.php" method="post" id="reset-form">
     <input type="hidden" id="name-searched" name="name-searched" value=""/>
     <input class="red-button" type="submit" value="Reset">
 </form>
@@ -90,7 +111,7 @@ include('includes/header.php');
 <nav>
 <ul id="category-list">
 <?php foreach ($categories as $category) : ?>
-<li class="button"><a href=".?category_id=<?php echo $category['categoryID']; ?>">
+<li class="button"><a href="?category_id=<?php echo $category['categoryID']; ?>">
 <?php echo $category['categoryName']; ?>
 </a>
 </li>
@@ -114,6 +135,8 @@ include('includes/header.php');
 <th>Engine Size</th>
 <th>Price</th>
 <th>Last Service</th>
+<th>Delete</th>
+<th>Edit</th>
 </thead>
 <?php }?>
 <tbody>
@@ -125,6 +148,22 @@ include('includes/header.php');
 <td><?php echo $bike['engineSize']; ?></td>
 <td class="right"><?php echo $bike['price']; ?></td>
 <td><?php echo $bike['lastService']; ?></td>
+<td><form action="delete_bike.php" method="post"
+id="delete_bike_form">
+<input type="hidden" name="bike_id"
+value="<?php echo $bike['bikeID']; ?>">
+<input type="hidden" name="category_id"
+value="<?php echo $bike['categoryID']; ?>">
+<input class="red-button" type="submit" value="Delete">
+</form></td>
+<td><form action="edit_bike_form.php" method="post"
+id="delete_bike_form">
+<input type="hidden" name="bike_id"
+value="<?php echo $bike['bikeID']; ?>">
+<input type="hidden" name="category_id"
+value="<?php echo $bike['categoryID']; ?>">
+<input class="green-button" type="submit" value="Edit">
+</form></td>
 </tr>
 <?php endforeach; ?>
 <?php } else { ?>
@@ -135,6 +174,22 @@ include('includes/header.php');
 <td><?php echo $bike['engineSize']; ?></td>
 <td class="right"><?php echo $bike['price']; ?></td>
 <td><?php echo $bike['lastService']; ?></td>
+<td><form action="delete_bike.php" method="post"
+id="delete_bike_form">
+<input type="hidden" name="bike_id"
+value="<?php echo $bike['bikeID']; ?>">
+<input type="hidden" name="category_id"
+value="<?php echo $bike['categoryID']; ?>">
+<input class="red-button" type="submit" value="Delete">
+</form></td>
+<td><form action="edit_bike_form.php" method="post"
+id="delete_bike_form">
+<input type="hidden" name="bike_id"
+value="<?php echo $bike['bikeID']; ?>">
+<input type="hidden" name="category_id"
+value="<?php echo $bike['categoryID']; ?>">
+<input class="green-button" type="submit" value="Edit">
+</form></td>
 </tr>
 <?php endforeach; ?>
 <?php }  ?>

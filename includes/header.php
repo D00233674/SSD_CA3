@@ -17,6 +17,7 @@
     <div class="topnav">
         <a href="index.php">Home</a>
         <a href="add_bike_form.php">Add Bike</a>
+        <a href="manage_bikes.php">Manage Bikes</a>
         <a href="category_list.php">Manage Categories</a>
         <a href="contact.php">Contact Us</a>
         <a href="register.php">Register</a>
