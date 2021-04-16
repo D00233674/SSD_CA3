@@ -24,7 +24,9 @@ include('includes/header.php');
  * Print out something that only logged in users can see.
  */
 
-echo 'Congratulations! You are logged in!';
+$username = $_SESSION['username'];
+
+echo "Welcome $username! You are logged in!";
 
     require_once('database.php');
 

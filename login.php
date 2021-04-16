@@ -57,6 +57,7 @@ if(isset($_POST['login'])){
             
             //Provide the user with a login session.
             $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $username;
             $_SESSION['logged_in'] = time();
             
             //Redirect to our protected page, which we called home.php
@@ -76,6 +77,7 @@ if(isset($_POST['login'])){
 <?php
 include('includes/header.php');
 ?>
+        <p>Dont have an account? <a href="register.php">Sign Up Here!</a></p>
         <h1>Login</h1>
         <form action="login.php" method="post">
             <label for="username">Username</label>

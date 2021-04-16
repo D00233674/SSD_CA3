@@ -83,7 +83,7 @@ if(isset($_POST['register'])){
 }
 
 ?>
-
+        <p>Already have an account? <a href="login.php">LogIn Here!</a></p>
         <h1>Register</h1>
         <form action="register.php" method="post">
             <label for="username">Username</label>
