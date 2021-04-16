@@ -13,8 +13,13 @@ if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
     header('Location: login.php');
     exit;
 }
+?>
+<div class="container">
+<?php
+include('includes/header.php');
+?>
 
-
+<?php
 /**
  * Print out something that only logged in users can see.
  */
@@ -32,10 +37,7 @@ echo 'Congratulations! You are logged in!';
     $statement->closeCursor();
 ?>
 <!-- the head section -->
-<div class="container">
-<?php
-include('includes/header.php');
-?>
+
     <h1>Category List</h1>
     <table>
         <tr>

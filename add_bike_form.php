@@ -13,7 +13,13 @@ if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
     header('Location: login.php');
     exit;
 }
+?>
 
+<div class="container">
+<?php
+include('includes/header.php');
+?>
+<?php
 
 /**
  * Print out something that only logged in users can see.
@@ -31,10 +37,6 @@ $categories = $statement->fetchAll();
 $statement->closeCursor();
 ?>
 <!-- the head section -->
- <div class="container">
-<?php
-include('includes/header.php');
-?>
         <h1>Add Bike</h1>
         <form action="add_bike.php" method="post" enctype="multipart/form-data"
               id="add_bike_form">

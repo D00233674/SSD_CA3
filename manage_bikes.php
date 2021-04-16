@@ -14,7 +14,14 @@ if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
     exit;
 }
 
+?>
+<div class="container">
+<?php
+include('includes/header.php');
+?>
 
+
+<?php
 /**
  * Print out something that only logged in users can see.
  */
@@ -88,10 +95,7 @@ $statement3->closeCursor();
 
 
 ?>
-<div class="container">
-<?php
-include('includes/header.php');
-?>
+
 <div id="sub-header">
 <h1 id="page-heading">Bike Shop</h1>
 
