@@ -73,3 +73,18 @@ function validateForm() {
         validateServiceDate();
     }
 }
+
+function loginButtons(loggedIn)
+{
+    alert(loggedIn);
+    if(loggedIn == 1)
+    {  
+        document.getElementById("logout").style.visibility = visible;
+        document.getElementById("login").style.visibility = hidden;
+        document.getElementById("register").style.visibility = hidden;
+    } else {
+        document.getElementById("login").style.visibility = visible;
+        document.getElementById("register").style.visibility = visible;
+        document.getElementById("logout").style.visibility = hidden;
+    }
+}

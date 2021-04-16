@@ -70,6 +70,15 @@ nav ul li {
   color: white;
 }
 
+.topnav #header-nav {
+  margin: 0;
+  padding-left: 1.25%;
+}
+
+.topnav #header-nav li {
+  list-style: none;
+}
+
 /* Here is where the body styles start */
 body {
   background-color: #ccc;

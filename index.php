@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Start the session.
+ */
+session_start();
+
+
+
 require_once('database.php');
 
 // Get category ID
@@ -70,6 +77,32 @@ $statement3->closeCursor();
 <div class="container">
 <?php
 include('includes/header.php');
+?>
+
+<?php
+    /**
+     * Start the session.
+     */
+    // session_start();
+
+    /**
+     * Check if the user is logged in.
+     */
+    $loggedIn = 0;
+    if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in'])){
+        //User not logged in. Redirect them back to the login.php page.
+        // header('Location: login.php');
+        // exit;
+        $loggedIn = 0;
+    } 
+    else {
+        $loggedIn = 1;
+        $username = $_SESSION['username'];
+
+        echo "Welcome $username! You are logged in!";
+    }
+
+
 ?>
 <div id="sub-header">
 <h1 id="page-heading">Bike Shop</h1>
