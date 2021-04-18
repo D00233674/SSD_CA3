@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2021 at 10:26 AM
+-- Generation Time: Apr 18, 2021 at 11:30 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `bike_shop`
 --
+CREATE DATABASE IF NOT EXISTS `bike_shop` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `bike_shop`;
 
 -- --------------------------------------------------------
 
@@ -27,7 +29,6 @@ SET time_zone = "+00:00";
 -- Table structure for table `bikes`
 --
 
-DROP TABLE IF EXISTS `bikes`;
 CREATE TABLE `bikes` (
   `bikeID` int(11) NOT NULL,
   `categoryID` int(11) NOT NULL,
@@ -64,7 +65,6 @@ INSERT INTO `bikes` (`bikeID`, `categoryID`, `name`, `engineSize`, `price`, `las
 -- Table structure for table `categories`
 --
 
-DROP TABLE IF EXISTS `categories`;
 CREATE TABLE `categories` (
   `categoryID` int(11) NOT NULL,
   `categoryName` varchar(255) NOT NULL
@@ -78,6 +78,29 @@ INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
 (1, 'A1'),
 (2, 'A2'),
 (3, 'A');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `username` varchar(25) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(60) COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`) VALUES
+(6, 'ATestRegistration', '$2y$12$l3ZgaL59RmMMVMBCGLWofOTJp9PHR8ZAjpAaQ5fERKKfdiK5bFCAu'),
+(7, 'User123', '$2y$12$O9nRWhklwquKJnVs/ZaTnuC5zWN43vs0btLVtijGdw8pC7928WsfK'),
+(8, 'User234', '$2y$12$aacDWkpNelOKEwTwRCmjnu3aytsqOtCOb.n3B7jFuVTqmoS7ZXC2G'),
+(9, 'User1234', '$2y$12$jtDcIfCqj/V2L7B.DC9S3uuzgNLTMgi5Xf7HCZ8Smhr7.6Vjmp4y2'),
+(10, 'UserTest', '$2y$12$onIz2NjFtKBHL/0gZSmXJuq0v3V9hxODj9fROU7aNLlUzOmdnGBFm');
 
 --
 -- Indexes for dumped tables
@@ -96,6 +119,13 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`categoryID`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -103,13 +133,19 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `bikes`
 --
 ALTER TABLE `bikes`
-  MODIFY `bikeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `bikeID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
   MODIFY `categoryID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
