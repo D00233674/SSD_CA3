@@ -291,6 +291,20 @@ br {
   margin-left: 2.5%;
 }
 
+.login-forms {
+  margin-left: 2.5%;
+  margin-right: auto;
+  margin-top: 2%;
+}
+
+.login-forms #username, .login-forms #password {
+  margin-left: 2.5%;
+}
+
+.login-forms input {
+  margin: 2% 0;
+}
+
 /* Here is where the sidebar styles start */
 aside {
   float: left;

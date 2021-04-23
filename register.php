@@ -85,12 +85,13 @@ if(isset($_POST['register'])){
 ?>
         <p>Already have an account? <a href="login.php">LogIn Here!</a></p>
         <h1>Register</h1>
-        <form action="register.php" method="post">
-            <label for="username">Username</label>
+        <form action="register.php" method="post" class="login-forms">
+            <label for="username">Username : </label><br>
             <input type="text" id="username" name="username"><br>
-            <label for="password">Password</label>
-            <input type="text" id="password" name="password"><br>
-            <input type="submit" name="register" value="Register"></button>
+            <label for="password">Password : </label><br>
+            <input type="text" id="password" name="password" required> 
+            <span id="passwordValid"></span><br>
+            <input class="green-button" type="submit" name="register" value="Register"></button>
         </form>
         <?php
     include('includes/footer.php');

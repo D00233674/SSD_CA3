@@ -79,12 +79,12 @@ include('includes/header.php');
 ?>
         <p>Dont have an account? <a href="register.php">Sign Up Here!</a></p>
         <h1>Login</h1>
-        <form action="login.php" method="post">
-            <label for="username">Username</label>
+        <form action="login.php" method="post" class="login-forms">
+            <label for="username">Username : </label><br>
             <input type="text" id="username" name="username"><br>
-            <label for="password">Password</label>
+            <label for="password">Password : </label><br>
             <input type="text" id="password" name="password"><br>
-            <input type="submit" name="login" value="Login">
+            <input class="green-button" type="submit" name="login" value="Login">
         </form>
         <?php
 include('includes/footer.php');

@@ -88,3 +88,14 @@ function loginButtons(loggedIn)
         document.getElementById("logout").style.visibility = hidden;
     }
 }
+
+function validatePassword() {
+    const pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$/;
+    if(document.getElementById("password").value == ""){
+        document.getElementById("passwordValid").innerHTML = " * Please enter your Password!";
+    } else if(!pattern.test(String(document.getElementById("name").value))) {
+        document.getElementById("passwordValid").innerHTML = " * Invalid format! (Uppercase,Lowercase,Number)";
+    } else {
+        document.getElementById("passwordValid").innerHTML = "&#10004;";
+    }
+}
